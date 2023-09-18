@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+}
+#otp-form{
+    display: none;
+}
+#alert-box{
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+}
+#spinner{
+  display: none;
+}
+  </style>
+</head>
+<body>
+  <div class="alert alert-danger" id="alert-box" role="alert"></div>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+             Welcome to E-Arena
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Create an account here</h5>
+              <form class="form-control" id="signup-form">
+                <input class="form-control mt-3 mb-3" type="text" name="uname" id="uname" placeholder="Enter your name" required>
+                <input class="form-control mb-3" type="number" name="uphone" id="uphone" placeholder="Enter your mobile number" required>
+                <input class="form-control mb-3" type="email" name="uemail" id="uemail" placeholder="Enter your email" required>
+                <input class="form-control mb-3" type="password" name="upass" id="upass" placeholder="Enter a password" required>
+                <input class="btn btn-success btn-lg mb-3" type="submit" id="usubmit" value="Sign up">
+                <button class="btn btn-success btn-lg mb-3" id="spinner" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                  <span role="status">Loading...</span>
+                </button>
+              </form>
+              <form class="form-control" id="otp-form">
+                <input class="form-control mt-3 mb-3" type="number" name="uotp" id="uotp" placeholder="Enter otp here" required>
+                <input type="submit" id="otp-submit" class="btn btn-danger btn-lg mb-3" value="Submit">
+              </form>
+              <div class="card-footer text-body-secondary">
+                <a href="./login.html">Already have an account?</a> 
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+<script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
